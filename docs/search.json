@@ -178,9 +178,29 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "SFB TRR265 A01 - PubHub",
+    "title": "SFB TRR265 A01 - REPO",
     "section": "",
-    "text": "Here we aim to make all scripts for A01 Publications easily accessible.",
+    "text": "Code\nsuppressWarnings(suppressMessages(library(tidyverse)))\nsuppressWarnings(suppressMessages(library(patchwork)))\n\ncbPalette &lt;- c( \"#0072B2\", \"#D55E00\", \"#009E73\", \"#CC79A7\",\n                \"#F0E442\", \"#56B4E9\", \"#999999\", \"#E69F00\")\nThis website aims to provide an overview across analysis scripts from the SFB TRR265 “Loss and regaining control in addictions” A01-project.\nIn this overview, scripts from publications pooled around different data sets will be documented.",
+    "crumbs": [
+      "A01 - Home"
+    ]
+  },
+  {
+    "objectID": "index.html#previous-publications",
+    "href": "index.html#previous-publications",
+    "title": "SFB TRR265 A01 - REPO",
+    "section": "1.1 Previous publications",
+    "text": "1.1 Previous publications\n\nDeenke\nWenzel",
+    "crumbs": [
+      "A01 - Home"
+    ]
+  },
+  {
+    "objectID": "index.html#current-publications",
+    "href": "index.html#current-publications",
+    "title": "SFB TRR265 A01 - REPO",
+    "section": "1.2 Current publications",
+    "text": "1.2 Current publications\n\n1.2.1 Bahr et al. 2026\nTemporal association of daily alcohol consumption were analysed using a linear mixed model approach in R and Julia.",
     "crumbs": [
       "A01 - Home"
     ]
