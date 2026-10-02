@@ -9,7 +9,7 @@
 <meta name="author" content="Fabian Arntz">
 <meta name="dcterms.date" content="2024-11-04">
 
-<title>Proof of concept: Sinus loop alcohol consumption – TRR265 - Script Repo</title>
+<title>Proof of concept: Sinus loop alcohol consumption – TRR265 - Script Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,7 +166,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">TRR265 - Script Repo</a> 
+      <a href="../">TRR265 - Script Repository</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -209,7 +209,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Bahr2026/00_abstract.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Temporal patterns of alcohol use in alcohol use disorder: a 12-month ecological momentary assessment</span></a>
+ <span class="menu-text">Abstract</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,17 +267,52 @@ window.Quarto = {
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Diallo et al.&nbsp;2026</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Diallo2026/00_abstract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstract</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Diallo2026/01_preprocessing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data preprocessing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Diallo2026/02_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Diallo2026/03_figures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tables &amp; Figures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Loneliness/Impulsive</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lonelyimpulse.html" class="sidebar-item-text sidebar-link">
@@ -343,7 +378,7 @@ window.Quarto = {
 </header>
 
 
-<div id="11b073da" class="cell" data-execution_count="1">
+<div id="6683fc7c" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MixedModels</span></span>
@@ -421,7 +456,7 @@ window.Quarto = {
 <li>Mannheim: 49.488888; 8.469167</li>
 <li>Dresden: 51.050407; 13.737262</li>
 </ul>
-<div id="d57df58d" class="cell" data-execution_count="2">
+<div id="1ba87ddf" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>meteo_b <span class="op">=</span> <span class="pp">@chain</span> CSV.<span class="fu">read</span>(<span class="st">"data/weather_data/meteo_b.csv"</span>, DataFrame, header<span class="op">=</span><span class="fl">3</span>) <span class="cf">begin</span></span>
@@ -496,7 +531,7 @@ window.Quarto = {
 <p>First we look at overall AC meaning Day gram per day with non-consumptiond days being coded as 0.</p>
 <section id="baseline-lmm" class="level4" data-number="1.1.1.1">
 <h4 data-number="1.1.1.1" class="anchored" data-anchor-id="baseline-lmm"><span class="header-section-number">1.1.1.1</span> baseline LMM</h4>
-<div id="5145004c" class="cell" data-execution_count="3">
+<div id="ba9f5f1a" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fac_0 <span class="op">=</span> [<span class="pp">@formula</span> alc_l <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
@@ -597,7 +632,7 @@ window.Quarto = {
 <section id="sinus-loop" class="level4" data-number="1.1.1.2">
 <h4 data-number="1.1.1.2" class="anchored" data-anchor-id="sinus-loop"><span class="header-section-number">1.1.1.2</span> sinus loop</h4>
 <p>Next we add sinus transformed yearday to the formula and run the loop.</p>
-<div id="1837b9a0" class="cell" data-execution_count="4">
+<div id="71f20456" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fac_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_l <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
@@ -619,7 +654,7 @@ window.Quarto = {
 <section id="results-and-visualisation" class="level4" data-number="1.1.1.3">
 <h4 data-number="1.1.1.3" class="anchored" data-anchor-id="results-and-visualisation"><span class="header-section-number">1.1.1.3</span> results and visualisation</h4>
 <p>Now we look at the improvement in deviacne across different centers</p>
-<div id="4ff5bd64" class="cell" data-execution_count="5">
+<div id="771d722a" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_ac <span class="op">=</span> <span class="pp">@chain</span> <span class="fu">DataFrame</span>(XLSX.<span class="fu">readtable</span>(<span class="st">"data/weather_data/df_ac.xlsx"</span>, <span class="st">"Sheet1"</span>)) <span class="cf">begin</span></span>
@@ -643,7 +678,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Lowest deviances at the following peaks:</p>
-<div id="c8dfa3f5" class="cell" data-execution_count="6">
+<div id="f8a1c173" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(row <span class="op">-&gt;</span> row.deviance <span class="op">&lt;</span> <span class="fu">minimum</span>(df_ac.deviance) <span class="op">+</span> <span class="fl">.05</span>, df_ac) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -687,7 +722,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A negative annual sinus pattern is centered at day 65</p>
-<div id="c17f964d" class="cell" data-execution_count="7">
+<div id="cb7c99d3" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fac_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_l <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dat_sin_65 <span class="op">=</span> <span class="pp">@chain</span> dat_ac <span class="cf">begin</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@transform</span>(<span class="op">:</span>yd_sin <span class="op">=</span> <span class="fu">sin</span>((<span class="fl">65</span> <span class="op">.+</span> <span class="op">:</span>yearday)<span class="op">./</span><span class="fl">365</span> <span class="op">.*</span><span class="fl">2</span>π))</span>
@@ -794,7 +829,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A positive annual sinus pattern is centered at day 248</p>
-<div id="c9cac81f" class="cell" data-execution_count="8">
+<div id="2a122e6a" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat_sin_248 <span class="op">=</span> <span class="pp">@chain</span> dat_ac <span class="cf">begin</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@transform</span>(<span class="op">:</span>yd_sin <span class="op">=</span> <span class="fu">sin</span>((<span class="fl">248</span> <span class="op">.+</span> <span class="op">:</span>yearday)<span class="op">./</span><span class="fl">365</span> <span class="op">.*</span><span class="fl">2</span>π))</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
@@ -901,7 +936,7 @@ window.Quarto = {
 </section>
 <section id="model-improvement-parameters" class="level4" data-number="1.1.1.4">
 <h4 data-number="1.1.1.4" class="anchored" data-anchor-id="model-improvement-parameters"><span class="header-section-number">1.1.1.4</span> model improvement parameters</h4>
-<div id="4e6ab948" class="cell" data-execution_count="9">
+<div id="49ae90f5" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>gof_summary <span class="op">=</span> <span class="kw">let</span></span>
@@ -976,7 +1011,7 @@ window.Quarto = {
 </div>
 <p>Adding the sinus curve improves the explained variance.</p>
 <p><strong><span class="math inline">\(R^2\)</span> of the baseline model:</strong></p>
-<div id="5128e47f" class="cell" data-execution_count="10">
+<div id="1bb2b7d9" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(m_ac)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -986,7 +1021,7 @@ window.Quarto = {
 </div>
 </div>
 <p><strong><span class="math inline">\(R^2\)</span> of the sinus model:</strong></p>
-<div id="b14ed6b3" class="cell" data-execution_count="11">
+<div id="fcca16f5" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(mac_248)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -996,7 +1031,7 @@ window.Quarto = {
 </div>
 </div>
 <p><strong>QQplot</strong></p>
-<div id="937fca96" class="cell" data-execution_count="12">
+<div id="c537f14e" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(mac_248)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1016,7 +1051,7 @@ window.Quarto = {
 <p>Here we look at drinkday frequency only using a binary measure for drinkdays in a GLMM approach.</p>
 <section id="baseline-model" class="level4" data-number="1.1.2.1">
 <h4 data-number="1.1.2.1" class="anchored" data-anchor-id="baseline-model"><span class="header-section-number">1.1.2.1</span> baseline model</h4>
-<div id="6ea2245e" class="cell" data-execution_count="13">
+<div id="cc41494a" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nAGQ <span class="op">=</span> <span class="fl">1</span></span>
@@ -1111,7 +1146,7 @@ window.Quarto = {
 </section>
 <section id="fitting-loop" class="level4" data-number="1.1.2.2">
 <h4 data-number="1.1.2.2" class="anchored" data-anchor-id="fitting-loop"><span class="header-section-number">1.1.2.2</span> fitting loop</h4>
-<div id="b47369ce" class="cell" data-execution_count="14">
+<div id="ef25e58a" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>facb_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_b <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
@@ -1133,7 +1168,7 @@ window.Quarto = {
 </section>
 <section id="results-and-visulaisation" class="level4" data-number="1.1.2.3">
 <h4 data-number="1.1.2.3" class="anchored" data-anchor-id="results-and-visulaisation"><span class="header-section-number">1.1.2.3</span> Results and visulaisation</h4>
-<div id="9825517b" class="cell" data-execution_count="15">
+<div id="26aa791a" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df_b <span class="op">=</span> <span class="pp">@chain</span> <span class="fu">DataFrame</span>(XLSX.<span class="fu">readtable</span>(<span class="st">"data/weather_data/df_b.xlsx"</span>, <span class="st">"Sheet1"</span>)) <span class="cf">begin</span></span>
@@ -1198,7 +1233,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A negative annual sinus pattern is centered at day 65</p>
-<div id="c64d1e7b" class="cell" data-execution_count="16">
+<div id="19dc770f" class="cell" data-execution_count="16">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>facb_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_b <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glmm_fit_loop</span>([<span class="st">"mb_65"</span>], facb_sin, dat_sin_65, contr_ac)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1293,7 +1328,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A positive annual sinus pattern is centered at day 248</p>
-<div id="7d2622ac" class="cell" data-execution_count="17">
+<div id="7b7d1652" class="cell" data-execution_count="17">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glmm_fit_loop</span>([<span class="st">"mb_248"</span>], facb_sin, dat_sin_248, contr_ac)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>mb_248</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1390,7 +1425,7 @@ window.Quarto = {
 </section>
 <section id="model-improvement-and-fit" class="level4" data-number="1.1.2.4">
 <h4 data-number="1.1.2.4" class="anchored" data-anchor-id="model-improvement-and-fit"><span class="header-section-number">1.1.2.4</span> model improvement and fit</h4>
-<div id="b9569910" class="cell" data-execution_count="18">
+<div id="f10626d6" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>gof_summary <span class="op">=</span> <span class="kw">let</span></span>
@@ -1465,7 +1500,7 @@ window.Quarto = {
 </div>
 <p>Adding the sinus curve improves the explained variance.</p>
 <p><strong>QQplot</strong></p>
-<div id="8f0e5fe5" class="cell" data-execution_count="19">
+<div id="e1e29e53" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(mb_248)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1482,7 +1517,7 @@ window.Quarto = {
 </section>
 <section id="ac-amounts---lmm" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="ac-amounts---lmm"><span class="header-section-number">1.1.3</span> AC amounts - LMM</h3>
-<div id="c5fcfef6" class="cell" data-execution_count="20">
+<div id="d62c348e" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dat_l <span class="op">=</span> <span class="fu">filter</span>(row <span class="op">-&gt;</span> row.alc_b <span class="op">==</span> <span class="fl">1</span>, dat_ac) </span>
@@ -1582,7 +1617,7 @@ window.Quarto = {
 </div>
 <section id="sinus-loop-1" class="level4" data-number="1.1.3.1">
 <h4 data-number="1.1.3.1" class="anchored" data-anchor-id="sinus-loop-1"><span class="header-section-number">1.1.3.1</span> sinus loop</h4>
-<div id="ac9c4833" class="cell" data-execution_count="21">
+<div id="bae28ac8" class="cell" data-execution_count="21">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>fl_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_l2 <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
@@ -1603,7 +1638,7 @@ window.Quarto = {
 </section>
 <section id="results-and-visulaisation-1" class="level4" data-number="1.1.3.2">
 <h4 data-number="1.1.3.2" class="anchored" data-anchor-id="results-and-visulaisation-1"><span class="header-section-number">1.1.3.2</span> Results and visulaisation</h4>
-<div id="32139b7c" class="cell" data-execution_count="22">
+<div id="4df4f4c4" class="cell" data-execution_count="22">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_l <span class="op">=</span> <span class="pp">@chain</span> <span class="fu">DataFrame</span>(XLSX.<span class="fu">readtable</span>(<span class="st">"data/weather_data/df_l.xlsx"</span>, <span class="st">"Sheet1"</span>)) <span class="cf">begin</span></span>
@@ -1668,7 +1703,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A negative annual sinus pattern is centered at day 68</p>
-<div id="ce588f10" class="cell" data-execution_count="23">
+<div id="d1b3a01b" class="cell" data-execution_count="23">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>fl_sin <span class="op">=</span> [<span class="pp">@formula</span> alc_l2 <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> wd <span class="op">+</span> hd <span class="op">+</span> jd <span class="op">+</span> ld <span class="op">+</span> a1 <span class="op">+</span> gender <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> Subj);]</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>dat_sin_68 <span class="op">=</span> <span class="pp">@chain</span> dat_l <span class="cf">begin</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@transform</span>(<span class="op">:</span>yd_sin <span class="op">=</span> <span class="fu">sin</span>((<span class="fl">68</span> <span class="op">.+</span> <span class="op">:</span>yearday)<span class="op">./</span><span class="fl">365</span> <span class="op">.*</span><span class="fl">2</span>π))</span>
@@ -1774,7 +1809,7 @@ window.Quarto = {
 </div>
 </div>
 <p>A positive annual sinus pattern is centered at day 250</p>
-<div id="a3975536" class="cell" data-execution_count="24">
+<div id="d9521f4a" class="cell" data-execution_count="24">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>dat_sin_250 <span class="op">=</span> <span class="pp">@chain</span> dat_l <span class="cf">begin</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@transform</span>(<span class="op">:</span>yd_sin <span class="op">=</span> <span class="fu">sin</span>((<span class="fl">250</span> <span class="op">.+</span> <span class="op">:</span>yearday)<span class="op">./</span><span class="fl">365</span> <span class="op">.*</span><span class="fl">2</span>π))</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
@@ -1880,7 +1915,7 @@ window.Quarto = {
 </section>
 <section id="model-improvement-and-fit-1" class="level4" data-number="1.1.3.3">
 <h4 data-number="1.1.3.3" class="anchored" data-anchor-id="model-improvement-and-fit-1"><span class="header-section-number">1.1.3.3</span> model improvement and fit</h4>
-<div id="c666b546" class="cell" data-execution_count="25">
+<div id="dbd1292c" class="cell" data-execution_count="25">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>gof_summary <span class="op">=</span> <span class="kw">let</span></span>
@@ -1955,7 +1990,7 @@ window.Quarto = {
 </div>
 <p>Adding the sinus curve improves the explained variance.</p>
 <p><strong><span class="math inline">\(R^2\)</span> of the baseline model:</strong></p>
-<div id="b7cd6092" class="cell" data-execution_count="26">
+<div id="765ad4bd" class="cell" data-execution_count="26">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(m_l)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1965,7 +2000,7 @@ window.Quarto = {
 </div>
 </div>
 <p><strong><span class="math inline">\(R^2\)</span> of the sinus model:</strong></p>
-<div id="dba30148" class="cell" data-execution_count="27">
+<div id="e3ad0216" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(ml_250)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1975,7 +2010,7 @@ window.Quarto = {
 </div>
 </div>
 <p><strong>QQplot</strong></p>
-<div id="2b2cc7ce" class="cell" data-execution_count="28">
+<div id="6ef08691" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(ml_250)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
