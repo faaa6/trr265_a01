@@ -8,7 +8,7 @@
 
 <meta name="author" content="Fabian Arntz">
 
-<title>Data Preprocessing – TRR265 - Script Repository</title>
+<title>Data Preprocessing – TRR265 - A01 Script Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">TRR265 - Script Repository</a> 
+      <a href="../">TRR265 - A01 Script Repository</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -298,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preproceced-daily-alcohol" id="toc-preproceced-daily-alcohol" class="nav-link active" data-scroll-target="#preproceced-daily-alcohol"><span class="header-section-number">1</span> preproceced daily alcohol</a></li>
+  <li><a href="#preprocessed-daily-alcohol" id="toc-preprocessed-daily-alcohol" class="nav-link active" data-scroll-target="#preprocessed-daily-alcohol"><span class="header-section-number">1</span> preprocessed daily alcohol</a></li>
   <li><a href="#preprocessed-individual-info" id="toc-preprocessed-individual-info" class="nav-link" data-scroll-target="#preprocessed-individual-info"><span class="header-section-number">2</span> preprocessed individual info</a>
   <ul class="collapse">
   <li><a href="#overview-distributions" id="toc-overview-distributions" class="nav-link" data-scroll-target="#overview-distributions"><span class="header-section-number">2.1</span> Overview &amp; Distributions</a></li>
@@ -358,15 +358,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">round</span>(<span class="fu">sd</span>(x, <span class="at">na.rm =</span> T),<span class="dv">1</span>))}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<section id="preproceced-daily-alcohol" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> preproceced daily alcohol</h1>
+<section id="preprocessed-daily-alcohol" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> preprocessed daily alcohol</h1>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"../../03_ema_preprocessing/data/preprocessing/data_alc.rda"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>Loading the preprocessed daily alcohol consumptoin [AC] EMA data. Documentation is currently in the process of publication and can be made available upon request.</p>
+<p>Loading the preprocessed daily alcohol consumption [AC] EMA data. Documentation is currently in the process of publication and can be made available upon request.</p>
 <p>The loaded data frame includes the following variables:</p>
 <ul>
 <li><code>Subj</code> ~ Redcap ID</li>
@@ -436,23 +436,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
-<div id="vhyogwrtmv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vhyogwrtmv table {
+<div id="jbgttfduls" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jbgttfduls table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vhyogwrtmv thead, #vhyogwrtmv tbody, #vhyogwrtmv tfoot, #vhyogwrtmv tr, #vhyogwrtmv td, #vhyogwrtmv th {
+#jbgttfduls thead, #jbgttfduls tbody, #jbgttfduls tfoot, #jbgttfduls tr, #jbgttfduls td, #jbgttfduls th {
   border-style: none;
 }
 
-#vhyogwrtmv p {
+#jbgttfduls p {
   margin: 0;
   padding: 0;
 }
 
-#vhyogwrtmv .gt_table {
+#jbgttfduls .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -478,12 +478,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_caption {
+#jbgttfduls .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vhyogwrtmv .gt_title {
+#jbgttfduls .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -495,7 +495,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#vhyogwrtmv .gt_subtitle {
+#jbgttfduls .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -507,7 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#vhyogwrtmv .gt_heading {
+#jbgttfduls .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -519,13 +519,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_bottom_border {
+#jbgttfduls .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_col_headings {
+#jbgttfduls .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -540,7 +540,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_col_heading {
+#jbgttfduls .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -560,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vhyogwrtmv .gt_column_spanner_outer {
+#jbgttfduls .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -572,15 +572,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#vhyogwrtmv .gt_column_spanner_outer:first-child {
+#jbgttfduls .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vhyogwrtmv .gt_column_spanner_outer:last-child {
+#jbgttfduls .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vhyogwrtmv .gt_column_spanner {
+#jbgttfduls .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -592,11 +592,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#vhyogwrtmv .gt_spanner_row {
+#jbgttfduls .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vhyogwrtmv .gt_group_heading {
+#jbgttfduls .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -622,7 +622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#vhyogwrtmv .gt_empty_group_heading {
+#jbgttfduls .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -637,15 +637,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#vhyogwrtmv .gt_from_md > :first-child {
+#jbgttfduls .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vhyogwrtmv .gt_from_md > :last-child {
+#jbgttfduls .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vhyogwrtmv .gt_row {
+#jbgttfduls .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -664,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#vhyogwrtmv .gt_stub {
+#jbgttfduls .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -677,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vhyogwrtmv .gt_stub_row_group {
+#jbgttfduls .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -691,15 +691,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#vhyogwrtmv .gt_row_group_first td {
+#jbgttfduls .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vhyogwrtmv .gt_row_group_first th {
+#jbgttfduls .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vhyogwrtmv .gt_summary_row {
+#jbgttfduls .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -709,16 +709,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vhyogwrtmv .gt_first_summary_row {
+#jbgttfduls .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_first_summary_row.thick {
+#jbgttfduls .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vhyogwrtmv .gt_last_summary_row {
+#jbgttfduls .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -728,7 +728,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_grand_summary_row {
+#jbgttfduls .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -738,7 +738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vhyogwrtmv .gt_first_grand_summary_row {
+#jbgttfduls .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -748,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_last_grand_summary_row_top {
+#jbgttfduls .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -758,11 +758,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_striped {
+#jbgttfduls .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vhyogwrtmv .gt_table_body {
+#jbgttfduls .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -771,7 +771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_footnotes {
+#jbgttfduls .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -785,7 +785,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_footnote {
+#jbgttfduls .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -794,7 +794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vhyogwrtmv .gt_sourcenotes {
+#jbgttfduls .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -808,7 +808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#vhyogwrtmv .gt_sourcenote {
+#jbgttfduls .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -816,72 +816,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#vhyogwrtmv .gt_left {
+#jbgttfduls .gt_left {
   text-align: left;
 }
 
-#vhyogwrtmv .gt_center {
+#jbgttfduls .gt_center {
   text-align: center;
 }
 
-#vhyogwrtmv .gt_right {
+#jbgttfduls .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vhyogwrtmv .gt_font_normal {
+#jbgttfduls .gt_font_normal {
   font-weight: normal;
 }
 
-#vhyogwrtmv .gt_font_bold {
+#jbgttfduls .gt_font_bold {
   font-weight: bold;
 }
 
-#vhyogwrtmv .gt_font_italic {
+#jbgttfduls .gt_font_italic {
   font-style: italic;
 }
 
-#vhyogwrtmv .gt_super {
+#jbgttfduls .gt_super {
   font-size: 65%;
 }
 
-#vhyogwrtmv .gt_footnote_marks {
+#jbgttfduls .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vhyogwrtmv .gt_asterisk {
+#jbgttfduls .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vhyogwrtmv .gt_indent_1 {
+#jbgttfduls .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vhyogwrtmv .gt_indent_2 {
+#jbgttfduls .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vhyogwrtmv .gt_indent_3 {
+#jbgttfduls .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vhyogwrtmv .gt_indent_4 {
+#jbgttfduls .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vhyogwrtmv .gt_indent_5 {
+#jbgttfduls .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vhyogwrtmv .katex-display {
+#jbgttfduls .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vhyogwrtmv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jbgttfduls div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -989,7 +989,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>dresden only</code> ~ Reformationstag</li>
 <li><code>mannheim only</code> ~ Reformationstag; Heilige drei könige; Fronleichnam</li>
 </ul>
-<p>Utilised dates can be found in the codefold below. Holiday-related AC days were coded as the day <strong>before</strong> a bank holiday generating the follwong holiday related variables:</p>
+<p>Utilised dates can be found in the codefold below. Holiday-related AC days were coded as the day <strong>before</strong> a bank holiday generating the following holiday related variables:</p>
 <ul>
 <li><code>holiday</code> ~ holiday [1;0]</li>
 <li><code>hd</code> ~ day before holiday contrast [no holiday = hd0; holiday = hd1]</li>
@@ -997,36 +997,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="weekday" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="weekday"><span class="header-section-number">3.2</span> weekday</h2>
-<p>Weekday for the analysis was coded to differetiate between days before a weekendday (i.e.&nbsp;Friday &amp; Saturday) and days not followed by a weekendday.</p>
+<p>Weekday for the analysis was coded to differentiate between days before a weekendday (i.e.&nbsp;Friday &amp; Saturday) and days not followed by a weekendday.</p>
 <p>The following Variables were generates:</p>
 <ul>
-<li><code>weekday_num</code> ~ weekday numerical (Monday == 1 - Sunbday == 7)</li>
+<li><code>weekday_num</code> ~ weekday numerical (Monday == 1 - Sunday == 7)</li>
 <li><code>weekday</code> ~ weekday categorical</li>
 <li><code>wd</code> ~ identifications of days followed by a weekendday [weekday == wd0, weekendday == wd1]</li>
 </ul>
 </section>
 <section id="covid" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="covid"><span class="header-section-number">3.3</span> Covid</h2>
-<p>Two hard lockdowsn were idenfied from 2020-03-22 to 2020-05-06 and 2020-12-16 to 2021-03-03,</p>
+<p>Two hard lockdown were identified from 2020-03-22 to 2020-05-06 and 2020-12-16 to 2021-03-03,</p>
 <ul>
-<li><code>covid</code> ~ har lockdown identification [no hard lockdown == ld0, hard lockdown == ld1]</li>
+<li><code>covid</code> ~ hard lockdown identification [no hard lockdown == ld0, hard lockdown == ld1]</li>
 </ul>
 </section>
 <section id="month-and-yearday" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="month-and-yearday"><span class="header-section-number">3.4</span> Month and yearday</h2>
-<p>To estimate annual variation of AC a three factor variable was generate based on months as well as a continuous variable estmating the annual variation in AC across one iteration of a sinus curve. This approach is documented and verified with temperature data in the script XXXXXXXXX.</p>
-<p>The following varibles were generates</p>
+<p>To estimate annual variation of AC a three factor variable was generate based on months as well as a continuous variable estimating the annual variation in AC across one iteration of a sinus curve. This approach is verified with temperature data <a href="../Bahr2026/05_sinusloop_weather.html">here</a> and documented for AC data <a href="../Bahr2026/06_sinusloop_ac.html">here</a>.</p>
+<p>The following variables were generates</p>
 <ul>
-<li><code>month</code> ~ month catrgoricat</li>
+<li><code>month</code> ~ month categorical</li>
 <li><code>month_num</code> ~ month numerical (January == 1 - December == 12)</li>
-<li><code>yearday</code> ~ day of the year centered at 1st of january</li>
+<li><code>yearday</code> ~ day of the year centered at 1st of January</li>
 <li><code>jd</code> ~ three factor variable [January; December; other]</li>
-<li><code>yd_sin</code> ~ yearday fitted acruss a sinus curve centered at yearday == 248 (6th September)</li>
+<li><code>yd_sin</code> ~ yearday fitted across a sinus curve centered at yearday == 248 (6th September)</li>
 </ul>
 </section>
 <section id="day-since-assessment-start" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="day-since-assessment-start"><span class="header-section-number">3.5</span> Day since assessment start</h2>
-<p>Days were counted sins the start of data assessment for each Subj. The follwoing variables were generated:</p>
+<p>Days were counted since the start of data assessment for each Subj. The following variables were generated:</p>
 <ul>
 <li><code>day</code> ~ day since the first assessment</li>
 <li><code>d1</code> ~ <code>day</code> centered at the group mean (162.7572), linear</li>
@@ -1036,7 +1036,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="age" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="age"><span class="header-section-number">3.6</span> Age</h2>
-<p>Age was estimate continuously based on each time od AC.</p>
+<p>Age was estimated continuously based on each time od AC.</p>
 <ul>
 <li><code>age_co</code> ~ day since the first assessment</li>
 <li><code>age_co_g</code> ~ age groups using age at enrollment ([16:32]; [33:49]; [50:66])</li>
@@ -1047,8 +1047,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="alcohol-consumption" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="alcohol-consumption"><span class="header-section-number">3.7</span> Alcohol consumption</h2>
-<p>Alcohol consumption was coded differentiation between consumption day frequency and consumed amounts on consumption day.</p>
-<p>For consumed amounty a boxcox analysis was implemented to identify transformation to approach a more normas distribution.</p>
+<p>Alcohol consumption was coded differentiating between binary consumption day frequency and continuous consumed amounts on consumption day.</p>
+<p>For consumed amounts a boxcox-analysis was implemented to identify transformation to approach a more normal distribution.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
@@ -1085,7 +1085,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Boxcox analysis suggests log transformation of consumed amounts. Accordingly, the following variables were defined:</p>
+<p>Boxcox-analysis suggests log transformation of consumed amounts. Accordingly, the following variables were defined:</p>
 <ul>
 <li><code>alc_b</code> ~ consumption days</li>
 <li><code>alc_g</code> ~ grams consumed on consumption days</li>

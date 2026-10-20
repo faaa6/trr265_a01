@@ -9,7 +9,7 @@
 <meta name="author" content="Fabian Arntz">
 <meta name="dcterms.date" content="2024-11-04">
 
-<title>Proof of concept: Sinus loop weather – TRR265 - Script Repository</title>
+<title>Proof of concept: Sinus loop weather – TRR265 - A01 Script Repository</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,7 +166,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">TRR265 - Script Repository</a> 
+      <a href="../">TRR265 - A01 Script Repository</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -380,7 +380,7 @@ window.Quarto = {
 </header>
 
 
-<div id="90fa94a8" class="cell" data-execution_count="1">
+<div id="4e996c0f" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MixedModels</span></span>
@@ -451,14 +451,14 @@ window.Quarto = {
 </div>
 <section id="weather-data" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> weather data</h1>
-<p>To verfiy the approach we generate a data frame with waether data from 2020-01-13 to 2024-12-27 in three different locations (i.e.&nbsp;Berlin, Mannheim, Dresden).</p>
+<p>To verify the approach we generated a data frame with weather data from 2020-01-13 to 2024-12-27 in three different locations (i.e.&nbsp;Berlin, Mannheim, Dresden).</p>
 <p>For this we use the (open meteo historical weather api)[https://open-meteo.com/en/docs/historical-weather-api].</p>
 <ul>
 <li>Berlin: 52.520008; 13.404954</li>
 <li>Mannheim: 49.488888; 8.469167</li>
 <li>Dresden: 51.050407; 13.737262</li>
 </ul>
-<div id="7f3b29d2" class="cell" data-execution_count="2">
+<div id="f7441c85" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>meteo_b <span class="op">=</span> <span class="pp">@chain</span> CSV.<span class="fu">read</span>(<span class="st">"data/weather_data/meteo_b.csv"</span>, DataFrame, header<span class="op">=</span><span class="fl">3</span>) <span class="cf">begin</span></span>
@@ -506,20 +506,20 @@ window.Quarto = {
 <h2 data-number="1.1" class="anchored" data-anchor-id="problem"><span class="header-section-number">1.1</span> Problem</h2>
 <p>There is variation associated within the time of year. Fitting this variation in a linear model using passing time as a continuous variable poses two problems:</p>
 <ol type="1">
-<li>linearity: Within one year, assumption of linearity accross proceding time is violated, as the highest valus (last day e.g.&nbsp;31st of December) and lowest value (first day e.g.&nbsp;1st of January) are back to back</li>
+<li>linearity: Within one year, assumption of linearity across proceeding time is violated, as the highest value (last day e.g.&nbsp;31st of December) and lowest value (first day e.g.&nbsp;1st of January) are also only one day appart.</li>
 <li>centering: Within one year, centering is arbitrary but can affect the model fit.</li>
 </ol>
 </section>
 <section id="solution" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="solution"><span class="header-section-number">1.2</span> Solution</h2>
-<p>To avoid the assumption of linearity the proceding in days will be transformde over one itteration of a sinus curve (i.e.&nbsp;0 - 2π).</p>
-<p>To avoid centering problem, the onset of the sinus curve will be moved along each day within one year, with models being generated for each proceding day.</p>
+<p>To avoid the assumption of linearity the proceeding in days will be transformed over one iteration of a sinus curve (i.e.&nbsp;0 - 2π).</p>
+<p>To avoid centering problem, the onset of the sinus curve will be moved along each day within one year, with models being generated for each proceeding day.</p>
 <p>This will be done using the following formula:</p>
 <p><span class="math display">\[
 sin(\frac{"c" + 0:365}{365*2π})
 \]</span></p>
 <p>with <code>c</code> being every number between 0 and 365</p>
-<div id="4a656d42" class="cell" data-execution_count="3">
+<div id="be7bb4e4" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
@@ -535,14 +535,14 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 </div>
-<p>Mathematically, this apporach further can be justified by the tilt of the earth axis and the rotational exposure to the sun, which also follows an sinus curve.</p>
+<p>Mathematically, this approach further can be justified by the tilt of the earth axis and the rotational exposure to the sun, which also follows an sinus curve.</p>
 </section>
 <section id="model-approach" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="model-approach"><span class="header-section-number">1.3</span> Model approach</h2>
 <section id="baseline-model" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="baseline-model"><span class="header-section-number">1.3.1</span> baseline model</h3>
 <p>Now we render a first simple model estimating the intercept and using the different centers as a random effect.</p>
-<div id="edba1ad2" class="cell" data-execution_count="4">
+<div id="5deb492a" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>contr_temp <span class="op">=</span> <span class="fu">Dict</span>(</span>
@@ -589,8 +589,8 @@ sin(\frac{"c" + 0:365}{365*2π})
 </section>
 <section id="model-fit-loop" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="model-fit-loop"><span class="header-section-number">1.3.2</span> model fit loop</h3>
-<p>Now we fit procedual models for every day and collect the model improvement on the <code>m0_tepm</code> model for each day-variable</p>
-<div id="19461013" class="cell" data-execution_count="5">
+<p>Now we fit procedural models for every day and collect the model improvement on the <code>m0_tepm</code> model for each day-variable</p>
+<div id="8aab6916" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ftemp_sin <span class="op">=</span> [<span class="pp">@formula</span> temp <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> yd_sin <span class="op">+</span> (<span class="fl">1</span> <span class="op">|</span> center);]</span>
@@ -610,7 +610,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 <section id="visualisation-and-results" class="level3" data-number="1.3.3">
 <h3 data-number="1.3.3" class="anchored" data-anchor-id="visualisation-and-results"><span class="header-section-number">1.3.3</span> visualisation and results</h3>
 <p>Now as we have the improvement for each model at each day.</p>
-<div id="946f4188" class="cell" data-execution_count="6">
+<div id="46d646ce" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> <span class="fu">Figure</span>()</span>
@@ -626,9 +626,9 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 </div>
-<p>There are two different peaks in the deviacne curve, with one showing a negative or positive associateion of the sinus yearday curve with the maximum daily outdoor temperature.</p>
+<p>There are two different peaks in the deviance curve, with one showing a negative or positive association of the sinus yearday curve with the maximum daily outdoor temperature.</p>
 <p>Now we filter the dataframe deviance for the lowest peaks and get:</p>
-<div id="d0fc95e7" class="cell" data-execution_count="7">
+<div id="d5c4b6b3" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(row <span class="op">-&gt;</span> row.deviance <span class="op">&lt;</span> <span class="fu">minimum</span>(df_temp.deviance) <span class="op">+</span> <span class="fl">1</span>, df_temp) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -681,7 +681,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 <p>which gives us the following two models</p>
-<div id="6bb76e64" class="cell" data-execution_count="8">
+<div id="a8bd073c" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mtemp_75</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="9">
 <table class="caption-top table table-sm table-striped small">
@@ -725,7 +725,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 <p>with a negative association</p>
-<div id="0398812a" class="cell" data-execution_count="9">
+<div id="7247f68b" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mtemp_258</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="10">
 <table class="caption-top table table-sm table-striped small">
@@ -769,7 +769,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 <p>and a positive association.</p>
-<div id="a80ee50d" class="cell" data-execution_count="10">
+<div id="6588e0c7" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>meteo_sin_258 <span class="op">=</span> <span class="pp">@chain</span> meteo <span class="cf">begin</span></span>
@@ -795,7 +795,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </section>
 <section id="model-improvement-parameters" class="level3" data-number="1.3.4">
 <h3 data-number="1.3.4" class="anchored" data-anchor-id="model-improvement-parameters"><span class="header-section-number">1.3.4</span> model improvement parameters</h3>
-<div id="4cc21e48" class="cell" data-execution_count="11">
+<div id="a4ac375a" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>gof_summary <span class="op">=</span> <span class="kw">let</span></span>
@@ -868,9 +868,9 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 </div>
-<p>Adding the sinus curve immensly improves the explained variance.</p>
+<p>Adding the sinus curve immensely improves the explained variance.</p>
 <p><strong><span class="math inline">\(R^2\)</span> of the baseline model:</strong></p>
-<div id="fffce1a1" class="cell" data-execution_count="12">
+<div id="f30e4e65" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(m_temp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -880,7 +880,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 <p><strong><span class="math inline">\(R^2\)</span> of the sinus model:</strong></p>
-<div id="a4ea7a09" class="cell" data-execution_count="13">
+<div id="bf6f3145" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>MixedModelsExtras.<span class="fu">r2</span>(mtemp_258)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -890,7 +890,7 @@ sin(\frac{"c" + 0:365}{365*2π})
 </div>
 </div>
 <p><strong>QQplot</strong></p>
-<div id="2d00ac51" class="cell" data-execution_count="14">
+<div id="a20b2216" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(mtemp_258)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
